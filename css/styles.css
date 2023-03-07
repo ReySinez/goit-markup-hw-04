@@ -179,7 +179,9 @@ body {
   background-image: var(--l-gra), url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  object-fit: cover;
+
+  display: block;
 }
 
 .main-container {
@@ -236,34 +238,16 @@ body {
   gap: 24px;
 }
 
+.main-title-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 8px;
+}
+
 .main-title-desc {
   display: flex;
   flex-direction: column-reverse;
-}
-
-.main-title-desc-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.main-page1-list {
-}
-
-.main-page1-item {
-  width: 264px;
-  height: 112px;
-}
-
-.main-page1-link {
-  background: #f4f4fd;
-
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .main-title {
@@ -286,6 +270,21 @@ body {
   color: var(--main-text-color, #434455);
 
   width: 264px;
+}
+
+.main-page1-link {
+  display: flex;
+  justify-content: center;
+
+  background: #f4f4fd;
+  border-radius: 4px;
+
+  height: 112px;
+}
+
+.main-page1-icon {
+  display: flex;
+  align-self: center;
 }
 
 .main-subtitle {
@@ -490,6 +489,7 @@ body {
 
 .footer-index2 {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-studio-container {
@@ -523,8 +523,6 @@ body {
 }
 
 .footer-soc-container {
-  display: flex;
-  flex-direction: column;
   margin-left: 120px;
 }
 
@@ -746,17 +744,17 @@ body {
   padding-top: 32px;
   padding-left: 16px;
   padding-bottom: 32px;
+  border-top: 0px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
 }
 
-.main-rows-container:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.main-page-list {
+  display: flex;
 }
 
-.main-rows-container:focus {
+.main-page-shadow:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
